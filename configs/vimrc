@@ -1,0 +1,72 @@
+" Pathogen load
+filetype off
+
+call pathogen#infect()
+call pathogen#helptags()
+
+filetype plugin indent on
+
+syntax on
+set nocompatible
+set number
+set showmatch
+set hlsearch
+set cursorline
+set foldmethod=marker
+set incsearch
+set autoindent
+set autowrite
+set expandtab
+set softtabstop=4 
+set tabstop=4 
+set shiftwidth=4
+set hidden
+colorscheme torte
+" automatically switch to directory where the file is located
+set autochdir
+
+" set default encoding
+set encoding=utf-8
+set fileencoding=utf-8
+
+let mapleader=","       " leader is comma
+
+" allows cursor change in tmux mode
+if exists('$TMUX')
+    let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+    let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+    let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+    let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
+
+" there exist modern ways for tracking your changes...
+set nobackup
+set noswapfile
+
+" autocomplete to longest available
+set wildmode=list:longest
+
+" spell vis settings
+hi clear SpellBad
+hi SpellBad ctermfg=red term=underline cterm=underline guifg=red gui=underline
+hi clear SpellCap
+hi SpellCap term=underline cterm=underline
+hi clear SpellRare
+hi SpellRare term=underline cterm=underline
+hi clear SpellLocal
+hi SpellLocal term=underline cterm=underline
+
+" assign filetypes if not automatically detected
+autocmd BufRead,BufNewFile *.txt setfiletype text
+autocmd BufNewFile,BufRead *.json set ft=javascript
+
+" Open terminal via <F8> key
+map <F8> :silent ! mate-terminal &<CR>
+
+" <CTRL-Y> inserts whole word from line above instead of single char
+inoremap <expr> <c-y> matchstr(getline(line('.')-1), '\%' . virtcol('.') . 'v\%(\k\+\\|.\)')
+inoremap <expr> <c-e> matchstr(getline(line('.')+1), '\%' . virtcol('.') . 'v\%(\k\+\\|.\)')
+
+" CtrlP activation
+set runtimepath^=~/.vim/bundle/ctrlp.vim

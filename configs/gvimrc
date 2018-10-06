@@ -1,0 +1,36 @@
+" Set GUI font style and size
+"set guifont=Courier\ 10
+set guifont=Luxi\ Mono\ 11
+"set guifont=Bitstream\ Vera\ Sans\ Mono\ 12
+
+" disable gui toolbar
+set go-=T
+
+"" " Set nice colors
+"" " background for normal text is light yellow
+"" " Text below the last line is darker grey
+"" " Cursor is blue
+"" " Constants are not underlined but have a slightly lighter background
+"" highlight Normal guibg=lightyellow
+"" highlight Cursor guibg=#33b1ff guifg=NONE
+"" highlight NonText guibg=grey80
+"" highlight Constant gui=NONE guibg=grey95
+"" highlight Special gui=NONE guibg=grey95
+
+"colorscheme slate
+colorscheme desert
+
+" spell vis settings
+hi clear SpellBad
+hi SpellBad ctermfg=red term=underline cterm=underline guifg=red gui=underline
+hi clear SpellCap
+hi SpellCap term=underline cterm=underline
+hi clear SpellRare
+hi SpellRare term=underline cterm=underline
+hi clear SpellLocal
+hi SpellLocal term=underline cterm=underline
+
+" system clipboard copy operations
+map <F7> <c-v>$h"+y
+vmap <F7> "+y
+imap <F7> <c-r>+
