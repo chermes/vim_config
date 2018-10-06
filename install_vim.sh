@@ -1,16 +1,13 @@
 #!/bin/sh
+# Installs the vim configuration and the basic plugins under linux
+
+## Init vim configs
 
 # install pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 cd ~/.vim/bundle
 
-# Python autocompletion
-git clone --recursive https://github.com/davidhalter/jedi-vim.git ~/.vim/bundle/jedi-vim
-
-# lint engine
-git clone https://github.com/w0rp/ale.git
-pip install flake8
-sudo apt-get install pylint
+## General plugins
 
 # NERDTree
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
@@ -27,3 +24,13 @@ git clone git://github.com/honza/vim-snippets.git
 
 # git plugin
 git clone https://github.com/tpope/vim-fugitive.git
+
+## Python
+
+# Python autocompletion
+git clone --recursive https://github.com/davidhalter/jedi-vim.git ~/.vim/bundle/jedi-vim
+
+# lint engine
+git clone https://github.com/w0rp/ale.git
+pip install flake8
+sudo apt-get install pylint
