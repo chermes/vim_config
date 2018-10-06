@@ -57,6 +57,9 @@ hi SpellRare term=underline cterm=underline
 hi clear SpellLocal
 hi SpellLocal term=underline cterm=underline
 
+" snipMate author definition
+let g:snips_author = "Christoph Hermes"
+
 " assign filetypes if not automatically detected
 autocmd BufRead,BufNewFile *.txt setfiletype text
 autocmd BufNewFile,BufRead *.json set ft=javascript
