@@ -34,6 +34,9 @@ git clone https://github.com/tpope/vim-fugitive.git
 # Python autocompletion
 git clone --recursive https://github.com/davidhalter/jedi-vim.git ~/.vim/bundle/jedi-vim
 
+# PEP8 indentation
+git clone https://github.com/Vimjas/vim-python-pep8-indent.git
+
 # lint engine
 git clone https://github.com/w0rp/ale.git
 pip install flake8

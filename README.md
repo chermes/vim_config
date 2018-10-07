@@ -24,6 +24,8 @@ Look into the configs/ directory for the vim and gvim configurations.
 
 * jedi-vim: Python autocompletion
 * ale: lint engine
+* flake8 (actually a Python package)
+* PEP8 Indentation
 
 ### LaTeX
 
