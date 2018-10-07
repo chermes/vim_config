@@ -2,7 +2,11 @@
 
 Vim Installation and Configuration
 
-## Plugins
+## Structure
+
+Look into the configs/ directory for the vim and gvim configurations.
+
+## Plugin List
 
 ### Initialization
 
