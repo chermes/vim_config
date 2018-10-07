@@ -38,3 +38,6 @@ git clone --recursive https://github.com/davidhalter/jedi-vim.git ~/.vim/bundle/
 git clone https://github.com/w0rp/ale.git
 pip install flake8
 sudo apt-get install pylint
+
+## LaTeX
+git clone https://github.com/lervag/vimtex.git
