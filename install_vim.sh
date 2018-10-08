@@ -1,6 +1,10 @@
 #!/bin/sh
 # Installs the vim configuration and the basic plugins under linux
 
+# get vim version
+VIMVER=`vim --version | head -1 | sed "s/^[^0-9]*//" | sed "s/ .*$//"`
+GT_VIM8=`echo "($VIMVER < 8.0)" | bc`
+
 ## Init vim configs
 
 # install pathogen
@@ -41,7 +45,15 @@ git clone --recursive https://github.com/davidhalter/jedi-vim.git ~/.vim/bundle/
 git clone https://github.com/Vimjas/vim-python-pep8-indent.git
 
 # lint engine
-git clone https://github.com/w0rp/ale.git
+if [ $GT_VIM8 ]
+then
+    echo "vim >= 8: using ale"
+    git clone https://github.com/w0rp/ale.git
+else
+    echo "vim < 8: using syntastic"
+    git clone https://github.com/vim-syntastic/syntastic
+fi
+
 pip install flake8
 
 ## LaTeX
