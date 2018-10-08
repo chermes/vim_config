@@ -70,3 +70,8 @@ inoremap <expr> <c-e> matchstr(getline(line('.')+1), '\%' . virtcol('.') . 'v\%(
 
 " CtrlP activation
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+" Ultisnips / snipmate author info
+let g:snips_author = "Christoph Hermes"
+let g:snips_email = "hermes@hausmilbe.net"
+let g:snips_github = "https://github.com/chermes"
