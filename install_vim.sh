@@ -29,6 +29,9 @@ git clone git://github.com/honza/vim-snippets.git
 # git plugin
 git clone https://github.com/tpope/vim-fugitive.git
 
+# Source code comment plugin
+git clone https://github.com/tomtom/tcomment_vim
+
 ## Python
 
 # Python autocompletion

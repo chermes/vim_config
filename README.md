@@ -19,6 +19,7 @@ Look into the configs/ directory for the vim and gvim configurations.
 * Vim airline: sophisticated statusline
 * Ultisnips: snippet manager + templates
 * fugitive: git manager
+* tcomment: source code comments
 
 ### Python
 
