@@ -1,10 +1,11 @@
 # Vim
 
-Vim Installation and Configuration
+This repository comprises a set of vim configurations and plugins of my daily
+work. Currently, I am using Python and LaTeX.
 
 ## Installation
 
-Initialize the ~/.vim directory and download / clone all the plugins listed below.
+Initialize the ~/.vim directory and download / clone all the plugins listed below:
 ```bash
 sh install_vim.sh
 ```
