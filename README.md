@@ -52,7 +52,7 @@ Since linking is not possible in Windows, the configuration files have to be
 copied:
 ```cmd
 cd configs
-sh .\copy_configs.bat
+.\copy_configs.bat
 ```
 
 ## Plugin List
