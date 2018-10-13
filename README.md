@@ -20,7 +20,7 @@ sh install_vim.sh
 
 ### Windows
 
-Created a %HOME% environment variable and point that to c:\Users\<yourname>.
+Created a %HOME% environment variable and point that to c:\Users\\<yourname>.
 The vim configurations and plugins will be installed to that directory.
 
 Initialize the ~/vimfiles directory and download / clone all the plugins listed
