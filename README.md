@@ -6,6 +6,7 @@ work. Currently, I am using Python and LaTeX.
 ## Requirements
 
 The following software packages need to be already installed on your system:
+
 * VIM (>= 8.0) with python3 support enabled
 * python3 (e.g. via (mini/ana)conda) + pip3: must be accessible via shell
 
