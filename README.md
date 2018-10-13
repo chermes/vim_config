@@ -3,21 +3,58 @@
 This repository comprises a set of vim configurations and plugins of my daily
 work. Currently, I am using Python and LaTeX.
 
-## Installation
+## Requirements
+
+The following software packages need to be already installed on your system and
+available via shell:
+* VIM (>= 8.0) with python3 support enabled
+* python3 (e.g. via (mini/ana)conda) + pip3
+
+## Plugin Installation
+
+### Linux
 
 Initialize the ~/.vim directory and download / clone all the plugins listed below:
 ```bash
 sh install_vim.sh
 ```
 
-Link the vim configuration files in the home directory:
-```bash
-sh configs/link_configs.sh
+### Windows
+
+Created a %HOME% environment variable and point that to c:\Users\<yourname>.
+The vim configurations and plugins will be installed to that directory.
+
+Initialize the ~/vimfiles directory and download / clone all the plugins listed
+below from a cmd shell:
+```cmd
+.\install_vim.bat
 ```
 
-## Structure
+## Configuration Installation: (g)vimrc
 
-Look into the configs/ directory for the vim and gvim configurations.
+Currently, the following configuration files need to be linked / copied:
+- vimrc
+- gvimrc
+- flake8
+
+### Linux
+
+Link the vim configuration files in the home directory:
+```bash
+cd configs
+sh link_configs.sh
+```
+
+### Windows
+
+Again, make sure that you created the %HOME% environment variable (see above).
+
+Since linking is not possible in Windows, the configuration files have to be
+copied:
+```cmd
+cd configs
+sh .\copy_configs.bat
+```
 
 ## Plugin List
 
