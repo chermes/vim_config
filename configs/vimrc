@@ -77,3 +77,21 @@ let g:snips_author = "Christoph Hermes"
 let g:snips_email = "hermes@hausmilbe.net"
 let g:snips_github = "https://github.com/chermes"
 let g:ultisnips_python_style = "numpy"
+
+"""""""""""""""""""""""""""""""""""
+"  Python-dependent break points  "
+"""""""""""""""""""""""""""""""""""
+autocmd FileType python map <F5> aimport IPython; IPython.embed()<ESC>
+autocmd FileType python imap <F5> import IPython; IPython.embed()
+" can deal with threads
+autocmd FileType python map <C-F5> afrom PyQt4.QtCore import pyqtRemoveInputHook; pyqtRemoveInputHook()<ESC>
+autocmd FileType python imap <C-F5> from PyQt4.QtCore import pyqtRemoveInputHook; pyqtRemoveInputHook()
+" close the debugging shell / script
+autocmd FileType python map <S-F5> aimport sys; sys.exit()<ESC>
+autocmd FileType python imap <S-F5> import sys; sys.exit()
+" insert timestamp
+autocmd FileType python nmap <F3> a<C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR><Esc>
+autocmd FileType python imap <F3> <C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR>
+
+" jedi-vim: disable the '.' expansion by default (can be triggered by <c-x o>
+let g:jedi#popup_on_dot = 0
