@@ -60,7 +60,6 @@ hi SpellLocal term=underline cterm=underline
 
 " assign filetypes if not automatically detected
 autocmd BufRead,BufNewFile *.txt setfiletype text
-autocmd BufNewFile,BufRead *.json set ft=javascript
 
 " Open terminal via <F8> key
 map <F8> :silent ! mate-terminal &<CR>
