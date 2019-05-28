@@ -94,3 +94,5 @@ autocmd FileType python imap <F3> <C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR>
 
 " jedi-vim: disable the '.' expansion by default (can be triggered by <c-x o>
 let g:jedi#popup_on_dot = 0
+" ignore certain directories in the CtrlP plugin:
+:let g:ctrlp_custom_ignore = 'node_modules\|__pycache__\|git'
