@@ -57,7 +57,7 @@ else
     echo "vim < 8: using syntastic"
     git clone https://github.com/vim-syntastic/syntastic
 fi
-pip install flake8
+python3 -m pip install flake8
 
 ###########
 #  LaTeX  #
